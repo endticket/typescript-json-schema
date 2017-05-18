@@ -692,7 +692,6 @@ function buildGenerator(program, args) {
                     var symbol = node.symbol;
                     var fullName_1 = tc.getFullyQualifiedName(symbol);
                     var nodeType = tc.getTypeAtLocation(node);
-                    fullName_1 = fullName_1.replace(/".*"\./, "");
                     allSymbols_1[fullName_1] = nodeType;
                     if (!sourceFile.hasNoDefaultLib) {
                         userSymbols_1[fullName_1] = nodeType;

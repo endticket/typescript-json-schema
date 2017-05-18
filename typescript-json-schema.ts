@@ -825,7 +825,8 @@ export function buildGenerator(program: ts.Program, args: PartialArgs = {}): Jso
                     // TODO: we probably don't want this eventually,
                     // as same types can occur in different files and will override eachother in allSymbols
                     // This means atm we can't generate all types in large programs.
-                    fullName = fullName.replace(/".*"\./, "");
+                    // see https://github.com/YousefED/typescript-json-schema/issues/112
+                    // fullName = fullName.replace(/".*"\./, "");
 
                     allSymbols[fullName] = nodeType;
 
